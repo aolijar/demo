@@ -19,7 +19,6 @@ function ScrollObservable() {
 
 ScrollObservable.prototype._process = function () {
   const viewportHeight = document.documentElement.clientHeight;
-  console.log(viewportHeight);
   // const documentHeight = document.body.clientHeight;
   const documentHeight = document.querySelector(".hero").clientHeight;
   const footerHeight = document.querySelector(".footer").clientHeight;

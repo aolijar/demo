@@ -62,17 +62,9 @@ body.home {
   height: 575vh;
   width: 100%;
   clip-path: inset(0 0 0 0);
-  border-radius: 0 0 10% 10%;
+  border-radius: 0 0 5% 5%;
   overflow: hidden;
   background-color: #eee;
-}
-
-.side-scroll {
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: blue;
-  height: 100vh;
 }
 
 .footer {
@@ -81,16 +73,8 @@ body.home {
   background-color: #eee;
   clip-path: inset(0 0 0 0);
   overflow: hidden;
-  border-radius: 10% 10% 0 0;
+  border-radius: 5% 5% 0 0;
 }
-
-/* 
-.footer {
-  position: sticky;
-  height: 100%;
-
-  border: 1px solid blue;
-} */
 
 /* horizontal scroll section */
 

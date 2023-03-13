@@ -9,12 +9,16 @@ const CanvasFrameScrubber = (() => {
         if (currentFrame === frameIndex) return;
         window.requestAnimationFrame(() => {
           // ENSURES VIDEO WON'T PLAY PAST CERTANIN POINT
-          if (frameIndex >= frames.length) {
-            return;
-          }
           const canvas = document.querySelector(".canvas");
           const context = canvas.getContext("2d");
-          // THIS IS ADDED TO DELETE OLD PNG
+          if (frameIndex >= frames.length) {
+            // IMPORT TO KEEP LAST FRAME OF MOVIE EVEN WHEN OFF SCREEN
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.drawImage(frames[frames.length - 1], 0, 0);
+            return;
+          }
+
+          // THIS IS ADDED TO DELETE OLD PNG --- normal functionality
           context.clearRect(0, 0, canvas.width, canvas.height);
           context.drawImage(frames[frameIndex], 0, 0);
         });
@@ -36,8 +40,6 @@ const CanvasFrameScrubberFooter = (() => {
     const observer = {
       next: (percentage) => {
         const frameIndex = Math.floor((percentage * (frames.length - 1)) / 100);
-        console.log(frames.length, "footer");
-        console.log(frameIndex, "idx FOOTER");
         if (currentFrame === frameIndex) return;
 
         window.requestAnimationFrame(() => {

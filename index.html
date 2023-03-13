@@ -6,15 +6,18 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./common/main.css" />
+    <link rel="preload" href="./videos/Aeriz_FlowerPackaging_2301910_V2.mp4" />
   </head>
   <body>
     <section class="hero">
-      <h1 class="hero-text">Aeriz Demo</h1>
+      <div class="hero-text">
+        <h1>Aeriz Demo</h1>
+      </div>
       <div class="canvas-container" id="canvas-container">
         <input
           name="frames-url"
           type="hidden"
-          value="./videos/aeriz-mobile/frame-{{id}}.png"
+          value="./videos/pngFrames/frame-{{id}}.png"
           data-frame-start="001"
           data-frame-end="200"
           data-frame-id-padding="3"
@@ -51,7 +54,7 @@
         <input
           name="footer-frames-url"
           type="hidden"
-          value="./videos/aeriz-mobile/frame-{{id}}.png"
+          value="./videos/pngFrames/frame-{{id}}.png"
           data-frame-start="221"
           data-frame-end="413"
           data-frame-id-padding="3"
