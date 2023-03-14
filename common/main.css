@@ -47,7 +47,7 @@ body.home {
 #demo-text {
   position: fixed;
   font-size: 150px;
-  top: 5%;
+  top: 40%;
   left: calc(100% + 0px);
   z-index: 0;
   /* -webkit-text-stroke: 1px #000;

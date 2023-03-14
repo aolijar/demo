@@ -8,12 +8,12 @@ window.addEventListener("scroll", () => {
   text.style.left = `calc(110% - ${window.scrollY}px)`;
 
   // text.style.top = ` ${window.scrollY + 50}px`;
-  if (fadeInCheck > 10000) {
+  if (fadeInCheck > footer.clientHeight / 1.5) {
     ft.style.opacity = 1;
-    // console.log(window.scrollY, footer.clientHeight, fadeInCheck);
-  } else if (fadeInCheck < 10000) {
+    console.log(window.scrollY, footer.clientHeight, fadeInCheck);
+  } else if (fadeInCheck < footer.clientHeight / 1.5) {
     ft.style.opacity = 0;
-    // console.log(window.scrollY, footer.clientHeight, fadeInCheck);
+    console.log(window.scrollY, footer.clientHeight, fadeInCheck);
   }
 });
 
