@@ -3,17 +3,17 @@ const ft = document.querySelector(".footer-text");
 const footer = document.querySelector(".footer");
 
 window.addEventListener("scroll", () => {
+  var fadeInCheck = window.scrollY - footer.clientHeight;
   //   console.log(window.scrollY);
   text.style.left = `calc(110% - ${window.scrollY}px)`;
 
   // text.style.top = ` ${window.scrollY + 50}px`;
-  if (window.scrollY > 10000) {
+  if (fadeInCheck > 10000) {
     ft.style.opacity = 1;
-    footer.style.backd;
-    console.log(window.scrollY);
-  } else if (window.scrollY < 10000) {
+    // console.log(window.scrollY, footer.clientHeight, fadeInCheck);
+  } else if (fadeInCheck < 10000) {
     ft.style.opacity = 0;
-    console.log(window.scrollY);
+    // console.log(window.scrollY, footer.clientHeight, fadeInCheck);
   }
 });
 
