@@ -1,14 +1,27 @@
 const text = document.getElementById("demo-text");
+const ft = document.querySelector(".footer-text");
+const footer = document.querySelector(".footer");
 
 window.addEventListener("scroll", () => {
   //   console.log(window.scrollY);
   text.style.left = `calc(110% - ${window.scrollY}px)`;
-  text.style.top = ` ${window.scrollY + 350}px`;
+
+  // text.style.top = ` ${window.scrollY + 50}px`;
+  if (window.scrollY > 10000) {
+    ft.style.opacity = 1;
+    footer.style.backd;
+    console.log(window.scrollY);
+  } else if (window.scrollY < 10000) {
+    ft.style.opacity = 0;
+    console.log(window.scrollY);
+  }
 });
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
+console.log(document.querySelector(".footer").getBoundingClientRect().bottom);
 
 // THIS IS HORIZONTAL SCROLL SECTION
 
